@@ -1,0 +1,22 @@
+{
+  "runId": "wrun_01K8FXJQED2RT8NRCS3VHMA9DA",
+  "deploymentId": "dpl_embedded",
+  "status": "pending",
+  "workflowName": "workflow//workflows/daily-standup.ts//generateStandupOnceWorkflow",
+  "executionContext": {
+    "traceCarrier": {}
+  },
+  "input": [
+    [
+      1
+    ],
+    {
+      "username": 2,
+      "hours": 3
+    },
+    "christian-byrne",
+    24
+  ],
+  "createdAt": "2025-10-26T09:28:50.381Z",
+  "updatedAt": "2025-10-26T09:28:50.381Z"
+}

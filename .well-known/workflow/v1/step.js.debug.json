@@ -1,0 +1,6 @@
+{
+  "stepFiles": [
+    "/home/c_byrne/projects/standup-dashboard/workflows/daily-standup.ts",
+    "/home/c_byrne/projects/standup-dashboard/node_modules/.pnpm/workflow@4.0.1-beta.3_@aws-sdk+client-sts@3.917.0_next@15.0.3_react-dom@19.0.0_react@19_953f1560e5b5900bbc2c66daccad0466/node_modules/workflow/dist/stdlib.js"
+  ]
+}

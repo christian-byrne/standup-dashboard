@@ -1,0 +1,156 @@
+{
+  "app": {
+    "title": "Panel de Standup",
+    "tagline": "Centro de misión retro-futurista",
+    "nav": {
+      "home": "Inicio",
+      "standup": "Standup",
+      "history": "Historial",
+      "settings": "Ajustes",
+      "docs": "Docs"
+    },
+    "footer": {
+      "left": "Cabina de standup de última generación · Build v0.1.0",
+      "right": "Cron nocturno · Orquestación de failover de Claude · Listo para Supabase"
+    }
+  },
+  "status": {
+    "loading": "Cargando datos del standup…",
+    "empty": "Aún no hay datos. Ejecuta el workflow para generar el primer informe.",
+    "error": "Ocurrió un problema al cargar los datos del standup.",
+    "retry": "Reintentar",
+    "download": {
+      "loading": "Preparando descarga…",
+      "success": "Descargado {filename}",
+      "error": "La descarga falló: {message}"
+    }
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Informe de misión",
+      "title": "Tu cabina de ingeniería autónoma, lista para standups en segundos.",
+      "body": "Recolecta señales de GitHub, mézclalas con narrativas de Claude y presenta desde una consola retro-futurista.",
+      "ctaDashboard": "Entrar al panel",
+      "ctaDocs": "Ver documentación"
+    },
+    "stats": {
+      "repos": {
+        "label": "Repositorios analizados",
+        "description": "{count} repos únicos en la ventana reciente"
+      },
+      "pullRequests": {
+        "label": "Pull requests resumidos",
+        "description": "{count} PRs capturados en los resúmenes"
+      },
+      "bullets": {
+        "label": "Balas de Claude",
+        "description": "{count} bullets en el último resumen"
+      }
+    }
+  },
+  "standup": {
+    "header": {
+      "eyebrow": "Narrativa autónoma",
+      "title": "Resumen de la misión",
+      "historyCta": "Ver historial"
+    },
+    "summary": {
+      "title": "Informe de esta noche",
+      "meta": "Generado a las {time} · Modelo: {model}",
+      "placeholder": "Aún no hay bullets en el resumen."
+    },
+    "timeline": {
+      "title": "Pulsos de actividad",
+      "subtitle": "Marcador temporal en construcción · Llegan hologramas WebGL",
+      "badge": "Tiempo real",
+      "empty": "Sin actividad reciente.",
+      "count": "{count} pulsos en la ventana reciente"
+    },
+    "terminal": {
+      "title": "Terminal",
+      "subtitle": "Streaming de logs del workflow · Filtros en camino",
+      "download": "Descargar JSON",
+      "empty": "Sin entradas en esta ventana."
+    }
+  },
+  "history": {
+    "header": {
+      "eyebrow": "Archivo",
+      "title": "Standups anteriores",
+      "body": "Navega el archivo, exporta bullets y rastrea impacto. Sparklines y filtros llegarán pronto."
+    },
+    "empty": "Todavía no hay historial de standups.",
+    "card": {
+      "bullets": "{count} bullets",
+      "cta": "Exportar Markdown",
+      "generated": "Generado {time}"
+    }
+  },
+  "settings": {
+    "header": {
+      "eyebrow": "Superficie de control",
+      "title": "Configuración",
+      "body": "Aquí vivirán autenticación, programación y adaptadores. La cuadrícula encaja con el tema New York para futuros controles."
+    },
+    "panels": {
+      "credentials": {
+        "title": "Credenciales",
+        "body": "Gestiona tokens de Anthropic y GitHub, aplica mínimo privilegio y verifica firmas.",
+        "cta": "Abrir bóveda"
+      },
+      "scheduling": {
+        "title": "Programación",
+        "body": "Ajusta la cadencia del cron, la zona horaria local y el orden de failover de Claude.",
+        "cta": "Editar horario"
+      },
+      "storage": {
+        "title": "Adaptadores de almacenamiento",
+        "body": "Alterna entre FS local, Supabase o Vercel KV con health checks y asistentes de migración.",
+        "cta": "Configurar adaptadores"
+      },
+      "prompts": {
+        "title": "Plantillas de prompt",
+        "body": "Crea paquetes de tono, heurísticas de bullets y sets de fallback para Claude.",
+        "cta": "Personalizar prompt"
+      }
+    }
+  },
+  "docs": {
+    "header": {
+      "eyebrow": "Consola de desarrollo",
+      "title": "Centro de documentación",
+      "body": "Aquí aterrizarán los documentos generados y tablas de esquemas. Por ahora sirve como andamiaje visual."
+    },
+    "sections": {
+      "api": {
+        "title": "Referencia de API",
+        "detail": "Generada desde esquemas de Zod. Incluirá endpoints REST y de workflow con ejemplos."
+      },
+      "contracts": {
+        "title": "Contratos de datos",
+        "detail": "Esquemas de ingesta, resumen y almacenamiento mostrados como tablas interactivas."
+      },
+      "architecture": {
+        "title": "Arquitectura",
+        "detail": "Diagramas Mermaid y Excalidraw sobre orquestación, adaptadores y observabilidad."
+      }
+    },
+    "table": {
+      "title": "Esquema de entorno",
+      "generatedUnknown": "Esperando generación de docs",
+      "refresh": "Actualizar",
+      "empty": "Aún no se generan los docs. Ejecuta `pnpm docs:generate`.",
+      "columns": {
+        "name": "Variable",
+        "type": "Tipo",
+        "optional": "Opcional",
+        "default": "Valor por defecto",
+        "notes": "Notas"
+      },
+      "boolean": {
+        "yes": "Sí",
+        "no": "No"
+      }
+    }
+  }
+}

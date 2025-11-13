@@ -1,0 +1,10 @@
+{
+  "extends": "./tsconfig.base.json",
+  "files": [],
+  "references": [
+    { "path": "apps/dashboard" },
+    { "path": "packages/services-github" },
+    { "path": "packages/services-claude" },
+    { "path": "packages/storage-fs" }
+  ]
+}

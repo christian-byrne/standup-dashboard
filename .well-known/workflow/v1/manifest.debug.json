@@ -1,0 +1,44 @@
+{
+  "steps": {
+    "node_modules/.pnpm/workflow@4.0.1-beta.3_@aws-sdk+client-sts@3.917.0_next@15.0.3_react-dom@19.0.0_react@19_953f1560e5b5900bbc2c66daccad0466/node_modules/workflow/dist/internal/builtins.js": {
+      "__builtin_response_array_buffer": {
+        "stepId": "__builtin_response_array_buffer"
+      },
+      "__builtin_response_json": {
+        "stepId": "__builtin_response_json"
+      },
+      "__builtin_response_text": {
+        "stepId": "__builtin_response_text"
+      }
+    },
+    "node_modules/.pnpm/workflow@4.0.1-beta.3_@aws-sdk+client-sts@3.917.0_next@15.0.3_react-dom@19.0.0_react@19_953f1560e5b5900bbc2c66daccad0466/node_modules/workflow/dist/stdlib.js": {
+      "fetch": {
+        "stepId": "step//node_modules/.pnpm/workflow@4.0.1-beta.3_@aws-sdk+client-sts@3.917.0_next@15.0.3_react-dom@19.0.0_react@19_953f1560e5b5900bbc2c66daccad0466/node_modules/workflow/dist/stdlib.js//fetch"
+      },
+      "sleep": {
+        "stepId": "step//node_modules/.pnpm/workflow@4.0.1-beta.3_@aws-sdk+client-sts@3.917.0_next@15.0.3_react-dom@19.0.0_react@19_953f1560e5b5900bbc2c66daccad0466/node_modules/workflow/dist/stdlib.js//sleep"
+      }
+    },
+    "workflows/daily-standup.ts": {
+      "collectGithubActivityStep": {
+        "stepId": "step//workflows/daily-standup.ts//collectGithubActivityStep"
+      },
+      "persistStandupStep": {
+        "stepId": "step//workflows/daily-standup.ts//persistStandupStep"
+      },
+      "summarizeWithClaudeStep": {
+        "stepId": "step//workflows/daily-standup.ts//summarizeWithClaudeStep"
+      }
+    }
+  },
+  "workflows": {
+    "workflows/daily-standup.ts": {
+      "dailyStandupWorkflow": {
+        "workflowId": "workflow//workflows/daily-standup.ts//dailyStandupWorkflow"
+      },
+      "generateStandupOnceWorkflow": {
+        "workflowId": "workflow//workflows/daily-standup.ts//generateStandupOnceWorkflow"
+      }
+    }
+  }
+}

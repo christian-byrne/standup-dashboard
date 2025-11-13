@@ -1,0 +1,18 @@
+{
+  "name": "@standup/workflow",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "files": [
+    "src"
+  ],
+  "dependencies": {
+    "@js-temporal/polyfill": "^0.4.4",
+    "@standup/config": "workspace:*",
+    "@standup/services-claude": "workspace:*",
+    "@standup/services-github": "workspace:*",
+    "@standup/storage-fs": "workspace:*",
+    "workflow": "^4.0.1-beta.3"
+  }
+}

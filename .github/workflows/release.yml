@@ -1,0 +1,85 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          
+      - name: Install dependencies
+        run: npm ci
+        
+      - name: Run tests
+        run: npm test
+        
+      - name: Build application
+        run: npm run build
+        
+      - name: Create Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: |
+            dist/**/*
+          body: |
+            ## Changes
+            
+            See [CHANGELOG.md](CHANGELOG.md) for details.
+            
+            ## Installation
+            
+            Download and extract the build artifacts, then deploy to your preferred hosting platform.
+            
+            ## Environment Variables
+            
+            Required environment variables for production:
+            - `GITHUB_TOKEN`: GitHub personal access token
+            - `CLAUDE_API_KEY`: Anthropic Claude API key
+            - `SUPABASE_URL`: Supabase project URL (optional)
+            - `SUPABASE_ANON_KEY`: Supabase anonymous key (optional)
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  publish-packages:
+    runs-on: ubuntu-latest
+    if: startsWith(github.ref, 'refs/tags/v')
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          registry-url: 'https://registry.npmjs.org'
+          
+      - name: Install dependencies
+        run: npm ci
+        
+      - name: Build packages
+        run: |
+          cd packages/storage-fs && npm run build
+          cd ../storage-supabase && npm run build
+          cd ../workflow && npm run build
+          
+      - name: Publish to npm
+        run: |
+          cd packages/storage-fs && npm publish --access public
+          cd ../storage-supabase && npm publish --access public
+          cd ../workflow && npm publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

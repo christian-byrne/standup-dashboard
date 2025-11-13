@@ -1,0 +1,22 @@
+{
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "name": "workflow",
+  "projectType": "library",
+  "root": "packages/workflow",
+  "sourceRoot": "packages/workflow/src",
+  "targets": {
+    "lint": {
+      "executor": "@nx/workspace:run-commands",
+      "options": {
+        "command": "pnpm eslint packages/workflow/src --ext .ts"
+      }
+    },
+    "typecheck": {
+      "executor": "@nx/workspace:run-commands",
+      "options": {
+        "command": "vue-tsc --noEmit --project packages/workflow/tsconfig.json"
+      }
+    }
+  },
+  "tags": []
+}

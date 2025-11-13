@@ -1,0 +1,156 @@
+{
+  "app": {
+    "title": "スタンドアップダッシュボード",
+    "tagline": "レトロフューチャーなミッションコントロール",
+    "nav": {
+      "home": "ホーム",
+      "standup": "スタンドアップ",
+      "history": "履歴",
+      "settings": "設定",
+      "docs": "ドキュメント"
+    },
+    "footer": {
+      "left": "次世代スタンドアップコックピット · Build v0.1.0",
+      "right": "ナイトリーCron · Claudeフェイルオーバー · Supabase対応"
+    }
+  },
+  "status": {
+    "loading": "スタンドアップデータを読み込み中…",
+    "empty": "まだデータがありません。ワークフローを実行して最初のレポートを生成してください。",
+    "error": "データの読み込み中に問題が発生しました。",
+    "retry": "再試行",
+    "download": {
+      "loading": "ダウンロードを準備しています…",
+      "success": "{filename} をダウンロードしました",
+      "error": "ダウンロードに失敗しました: {message}"
+    }
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "ミッションブリーフ",
+      "title": "1分以内のスタンドアップを実現する自律エンジニアリングコックピット。",
+      "body": "GitHubシグナルを収集し、Claudeのナラティブと融合させ、レトロフューチャーな指令室から報告します。",
+      "ctaDashboard": "ダッシュボードへ",
+      "ctaDocs": "ドキュメントを見る"
+    },
+    "stats": {
+      "repos": {
+        "label": "解析したリポジトリ",
+        "description": "直近ウィンドウで{count}個のリポジトリ"
+      },
+      "pullRequests": {
+        "label": "要約したPR",
+        "description": "サマリーで{count}件のPRをカバー"
+      },
+      "bullets": {
+        "label": "Claudeのバレット数",
+        "description": "最新サマリーで{count}個のバレット"
+      }
+    }
+  },
+  "standup": {
+    "header": {
+      "eyebrow": "自律ナラティブ",
+      "title": "Claudeミッションサマリー",
+      "historyCta": "履歴を見る"
+    },
+    "summary": {
+      "title": "今夜のブリーフ",
+      "meta": "生成時刻 {time} · モデル: {model}",
+      "placeholder": "サマリーバレットはまだありません。"
+    },
+    "timeline": {
+      "title": "アクティビティパルス",
+      "subtitle": "タイムライン描画は開発中 · まもなくWebGLホログラム",
+      "badge": "リアルタイム",
+      "empty": "最近のアクティビティはありません。",
+      "count": "直近ウィンドウで {count} 件のパルス"
+    },
+    "terminal": {
+      "title": "ターミナルフィード",
+      "subtitle": "ワークフローのログをストリーミング中 · フィルタは順次追加",
+      "download": "JSON をダウンロード",
+      "empty": "このウィンドウにはログがありません。"
+    }
+  },
+  "history": {
+    "header": {
+      "eyebrow": "アーカイブ",
+      "title": "過去のスタンドアップ",
+      "body": "アーカイブを巡回し、バレットをエクスポートし、インパクトを追跡します。スパークラインとフィルタは近日追加。"
+    },
+    "empty": "スタンドアップ履歴はまだありません。",
+    "card": {
+      "bullets": "{count} 件のバレット",
+      "cta": "Markdownをエクスポート",
+      "generated": "{time} に生成"
+    }
+  },
+  "settings": {
+    "header": {
+      "eyebrow": "コントロールサーフェス",
+      "title": "設定",
+      "body": "認証、スケジューリング、アダプターの切替がここに配置されます。New Yorkテーマで後続のUIを受け入れるレイアウトです。"
+    },
+    "panels": {
+      "credentials": {
+        "title": "認証情報",
+        "body": "AnthropicとGitHubトークンを管理し、最小権限と署名検証を行います。",
+        "cta": "ボールトを開く"
+      },
+      "scheduling": {
+        "title": "スケジューリング",
+        "body": "Cronの間隔、タイムゾーンの上書き、Claudeモデルのフェイルオーダーを調整します。",
+        "cta": "スケジュールを編集"
+      },
+      "storage": {
+        "title": "ストレージアダプター",
+        "body": "ローカルFS、Supabase、Vercel KVを切り替え、ヘルスチェックとマイグレーションを実行します。",
+        "cta": "アダプターを設定"
+      },
+      "prompts": {
+        "title": "プロンプトテンプレート",
+        "body": "トーンパック、バレットのヒューリスティック、フェイルオーバー指示をカスタマイズします。",
+        "cta": "プロンプトを編集"
+      }
+    }
+  },
+  "docs": {
+    "header": {
+      "eyebrow": "開発者コンソール",
+      "title": "ドキュメントハブ",
+      "body": "生成されたドキュメントとスキーマテーブルがここに配置されます。現在はレイアウトの骨組みです。"
+    },
+    "sections": {
+      "api": {
+        "title": "APIリファレンス",
+        "detail": "Zodスキーマから自動生成。RESTとワークフローエンドポイントの例を掲載予定。"
+      },
+      "contracts": {
+        "title": "データ契約",
+        "detail": "PR取得、Claudeサマリー、ストレージレコードのスキーマをインタラクティブに表示。"
+      },
+      "architecture": {
+        "title": "アーキテクチャ",
+        "detail": "オーケストレーション、アダプター、オブザーバビリティを示すMermaid/Excalidraw図。"
+      }
+    },
+    "table": {
+      "title": "環境変数スキーマ",
+      "generatedUnknown": "ドキュメント生成を待っています",
+      "refresh": "再読み込み",
+      "empty": "まだドキュメントが生成されていません。`pnpm docs:generate` を実行してください。",
+      "columns": {
+        "name": "変数",
+        "type": "型",
+        "optional": "任意",
+        "default": "デフォルト値",
+        "notes": "メモ"
+      },
+      "boolean": {
+        "yes": "はい",
+        "no": "いいえ"
+      }
+    }
+  }
+}

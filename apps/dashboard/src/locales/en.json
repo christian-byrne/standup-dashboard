@@ -1,0 +1,156 @@
+{
+  "app": {
+    "title": "Standup Dashboard",
+    "tagline": "Retro-future mission control",
+    "nav": {
+      "home": "Home",
+      "standup": "Standup",
+      "history": "History",
+      "settings": "Settings",
+      "docs": "Docs"
+    },
+    "footer": {
+      "left": "Next-gen standup cockpit · Build v0.1.0",
+      "right": "Nightly cron · Claude failover orchestration · Supabase-ready"
+    }
+  },
+  "status": {
+    "loading": "Loading standup data…",
+    "empty": "No standup data yet. Run the workflow to generate your first report.",
+    "error": "Something went wrong while loading standup data.",
+    "retry": "Retry",
+    "download": {
+      "loading": "Preparing download…",
+      "success": "Downloaded {filename}",
+      "error": "Download failed: {message}"
+    }
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Standup Mission Brief",
+      "title": "Your autonomous engineering cockpit, tuned for sub-minute standups.",
+      "body": "Harvest GitHub signals, fuse them with Claude narratives, and brief stakeholders from a retro-future command deck.",
+      "ctaDashboard": "Enter Dashboard",
+      "ctaDocs": "View System Docs"
+    },
+    "stats": {
+      "repos": {
+        "label": "Repos Scanned",
+        "description": "{count} unique repos in the recent window"
+      },
+      "pullRequests": {
+        "label": "Pull Requests Summarized",
+        "description": "{count} PRs captured across summaries"
+      },
+      "bullets": {
+        "label": "Claude Bullet Count",
+        "description": "{count} bullets across the latest summary"
+      }
+    }
+  },
+  "standup": {
+    "header": {
+      "eyebrow": "Autonomous Narrative",
+      "title": "Claude Mission Summary",
+      "historyCta": "View History"
+    },
+    "summary": {
+      "title": "Tonight's Brief",
+      "meta": "Generated at {time} · Model: {model}",
+      "placeholder": "No summary bullets available yet."
+    },
+    "timeline": {
+      "title": "Activity Pulses",
+      "subtitle": "Timeline render placeholder · WebGL hologram incoming",
+      "badge": "Realtime",
+      "empty": "No recent activity detected.",
+      "count": "{count} pulses across the recent window"
+    },
+    "terminal": {
+      "title": "Terminal Feed",
+      "subtitle": "Streaming workflow logs · Filter chips arriving soon",
+      "download": "Download JSON",
+      "empty": "No activity entries in this window."
+    }
+  },
+  "history": {
+    "header": {
+      "eyebrow": "Archive Command",
+      "title": "Previous Standups",
+      "body": "Navigate the archive, export bullets, and trace impact. Sparklines and filters land soon."
+    },
+    "empty": "No historical standups yet.",
+    "card": {
+      "bullets": "{count} bullets",
+      "cta": "Export Markdown",
+      "generated": "Generated {time}"
+    }
+  },
+  "settings": {
+    "header": {
+      "eyebrow": "Control Surface",
+      "title": "Settings",
+      "body": "Auth, scheduling, and adapter toggles will live here. Layout mirrors the shadcn New York spacing to stage upcoming controls."
+    },
+    "panels": {
+      "credentials": {
+        "title": "Credentials",
+        "body": "Manage Anthropic + GitHub tokens, configure least privilege secrets, and verify hash signatures.",
+        "cta": "Open vault"
+      },
+      "scheduling": {
+        "title": "Scheduling",
+        "body": "Tune cron cadence, local timezone overrides, and Claude model failover order.",
+        "cta": "Edit schedule"
+      },
+      "storage": {
+        "title": "Storage Adapters",
+        "body": "Switch between local FS, Supabase, or Vercel KV with health checks and migration helpers.",
+        "cta": "Configure adapters"
+      },
+      "prompts": {
+        "title": "Prompt Templates",
+        "body": "Curate tone packs, bullet heuristics, and fallback instruction sets for Claude.",
+        "cta": "Customize prompt"
+      }
+    }
+  },
+  "docs": {
+    "header": {
+      "eyebrow": "Developer Console",
+      "title": "Documentation Hub",
+      "body": "Generated docs and schema tables will land here. For now, the layout anchors spacing and typography for the New York theme."
+    },
+    "sections": {
+      "api": {
+        "title": "API Reference",
+        "detail": "Auto-generated from Zod schemas. Will include REST + workflow endpoints with example payloads."
+      },
+      "contracts": {
+        "title": "Data Contracts",
+        "detail": "PR ingestion, Claude summary, and storage record schemas rendered as interactive tables."
+      },
+      "architecture": {
+        "title": "Architecture",
+        "detail": "Mermaid + Excalidraw diagrams describing orchestration, adapters, and observability wiring."
+      }
+    },
+    "table": {
+      "title": "Environment Schema",
+      "generatedUnknown": "Awaiting docs generation",
+      "refresh": "Refresh",
+      "empty": "Docs not generated yet. Run `pnpm docs:generate`.",
+      "columns": {
+        "name": "Variable",
+        "type": "Type",
+        "optional": "Optional",
+        "default": "Default",
+        "notes": "Notes"
+      },
+      "boolean": {
+        "yes": "Yes",
+        "no": "No"
+      }
+    }
+  }
+}
