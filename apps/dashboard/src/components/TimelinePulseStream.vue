@@ -61,6 +61,10 @@ const stateColor = (state: TimelinePulse['state']) => {
       return 'bg-rose-400/80 border-rose-300/60 shadow-[0_0_12px_rgba(244,114,182,0.4)]';
   }
 };
+
+const openUrl = (url: string) => {
+  window.open(url, '_blank');
+};
 </script>
 
 <template>
@@ -144,7 +148,7 @@ const stateColor = (state: TimelinePulse['state']) => {
             animationDelay: `${index * 0.1}s`
           }"
           :title="`${pulse.repository} - ${pulse.state}`"
-          @click="() => window.open(pulse.url, '_blank')"
+          @click="() => openUrl(pulse.url)"
         >
           <!-- Outer glow ring -->
           <span 
