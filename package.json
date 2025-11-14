@@ -25,7 +25,7 @@
     "@standup/services-claude": "workspace:*",
     "@standup/services-github": "workspace:*",
     "@standup/storage-fs": "workspace:*",
-    "@standup/storage-supabase": "workspace:*",
+    "@standup-dashboard/storage-supabase": "workspace:*",
     "dotenv": "^16.4.5",
     "shadcn-vue": "^0.10.5",
     "tailwindcss-animate": "^1.0.7",
