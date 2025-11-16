@@ -81,7 +81,7 @@ function isActive(path: string) {
       <!-- Menu Header -->
       <div class="p-6 border-b border-white/10">
         <h2 class="text-2xl font-semibold hologram-text text-primary">
-          Mission Control
+          Standup Dashboard
         </h2>
         <p class="text-sm text-white/60 mt-1">Navigation</p>
       </div>

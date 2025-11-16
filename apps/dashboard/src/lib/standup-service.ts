@@ -21,26 +21,31 @@ export interface StandupRecord {
 const API_BASE = '/api/standups';
 
 async function getJson<T>(path: string): Promise<T> {
-  const res = await fetch(path, {
-    headers: {
-      accept: 'application/json',
-    },
-  });
+  try {
+    const res = await fetch(path, {
+      headers: {
+        accept: 'application/json',
+      },
+    });
 
-  if (res.status === 204) {
-    return undefined as T;
-  }
+    if (res.status === 204) {
+      return undefined as T;
+    }
 
-  if (res.status === 404) {
+    if (res.status === 404) {
+      return null as T;
+    }
+
+    if (!res.ok) {
+      // In production without API, return null to trigger fallback
+      return null as T;
+    }
+
+    return (await res.json()) as T;
+  } catch (error) {
+    // Network errors or JSON parse errors - return null to trigger fallback
     return null as T;
   }
-
-  if (!res.ok) {
-    const text = await res.text();
-    throw new Error(`Request failed (${res.status}): ${text}`);
-  }
-
-  return (await res.json()) as T;
 }
 
 export async function fetchLatestStandup(): Promise<StandupRecord | null> {

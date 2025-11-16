@@ -5,7 +5,7 @@ const dots = ref(['', '', ''])
 const currentStep = ref(0)
 
 const loadingSteps = [
-  'Initializing mission control...',
+  'Loading dashboard...',
   'Scanning development activity...',
   'Processing AI insights...',
   'Preparing dashboard...'

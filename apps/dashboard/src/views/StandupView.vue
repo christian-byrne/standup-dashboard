@@ -82,10 +82,10 @@ const copyActivityFeed = () => {
   <MobileMenu />
   <main class="mx-auto flex w-full max-w-6xl flex-col gap-4 sm:gap-8 p-4 sm:py-10">
     <header class="flex flex-col sm:flex-row flex-wrap items-start sm:items-center justify-between gap-4 relative">
-      <!-- Mission Control Status Indicator -->
+      <!-- Status Indicator -->
       <div class="absolute -top-4 -left-4 hidden sm:flex items-center gap-2 text-xs text-white/40">
         <div class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></div>
-        <span class="uppercase tracking-[0.2em]">Mission Control Active</span>
+        <span class="uppercase tracking-[0.2em]">Dashboard Active</span>
       </div>
       
       <div class="relative">

@@ -10,7 +10,11 @@ const routes: RouteRecordRaw[] = [
     path: '/',
     name: 'home',
     component: () => import('../views/HomeView.vue'),
-    meta: { title: 'Mission Control' },
+    meta: { title: 'Dashboard' },
+  },
+  {
+    path: '/latest',
+    redirect: '/',
   },
   {
     path: '/standup',
@@ -22,19 +26,19 @@ const routes: RouteRecordRaw[] = [
     path: '/history',
     name: 'history',
     component: () => import('../views/HistoryView.vue'),
-    meta: { title: 'Activity History' },
+    meta: { title: 'History' },
   },
   {
     path: '/settings',
     name: 'settings',
     component: () => import('../views/SettingsView.vue'),
-    meta: { title: 'Command Settings' },
+    meta: { title: 'Settings' },
   },
   {
     path: '/docs',
     name: 'docs',
     component: () => import('../views/DocsView.vue'),
-    meta: { title: 'Developer Docs' },
+    meta: { title: 'Documentation' },
   },
 ];
 
